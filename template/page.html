@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: 'Brush Script MT', cursive;
+ background: linear-gradient(#9198e5,#e66465 );
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100% 100%;
+}
+.container{
+                color: rgb(255, 255, 255);
+                font-size:40px;
+                text-align: center;
+                padding:10px;
+
+            }
+.button {
+  background-color: black;
+  border: 1px solid green;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 16px;
+  cursor: pointer;
+  display:block;
+  border-radius: 8px;
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family:courier;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 30px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.footer {
+        position:relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color:black;
+        font-size:30px;
+font-weight: bold;
+        text-align: center;
+        padding:5px;
+
+}
+
+
+.contact{
+      border-top: 10px solid #F45140;
+			background: #40514E;
+			color: white;
+		}
+
+</style>
+</head>
+<body>
+
+		<div class="container" >
+			<h2 class='container-heading' ><span>Movie Hub</span><img src="https://www.pngmart.com/files/3/Popcorn-Transparent-PNG.png" alt="emoji" ,height="50" , width="50"></h2>
+	        	<div class='description'>
+
+			</div>
+		</div>
+<div class="sent">
+	<form action="/home">
+<button class="button" ><span><b>Sentiment Analysis</b> </span></button>
+
+	</form>
+<br>
+<br>
+
+	<form action="/ind2">
+<button class="button" style="vertical-align:middle"><span><b>Genre classification and certification</b></span></button></form>
+<br>
+<br>
+	<form action="/index3">
+<button class="button" style="vertical-align:middle"><span><b>Summarization</b> </span></button></form>
+</div>
+			<div class="footer">
+				<br><br><centre>Project by Madhurika, Jayavarshini, Dilli Prasanna and Siddhartha</centre><br><br><br><br><br><br><br><br><br>
+			  </div>
+
+
+</body>
+</html>
+
+

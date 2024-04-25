@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Genre classifier and Certificate generator</title>
+
+
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<style>
+		body {
+			background: linear-gradient(#e66465, #9198e5);
+			background-repeat: repeat;
+			background-attachment:scroll;
+			background-size: 100% 100%;
+
+		  }
+		  .container{
+                color:black;
+                font-color:black;
+                font-size:40px;
+                text-align: center;
+                padding:10px;
+
+            }
+			.results{
+		    color:black;
+                font-size:30px;
+                text-align: center;
+                padding:10px;
+
+			}
+		  .footer {
+                position:relative;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color:black;
+                font-size:30px;
+				font-weight: bold;
+                text-align: center;
+                padding:5px;
+
+}
+.footer {
+
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: linear-gradient(#e66465, #9198e5);
+   color: white;
+   font-size:20px;
+   text-align: center;
+   padding:3S0px;
+border-top: 10px solid #F45140;
+}
+		.contact{
+			background: #40514E;
+			color: white;
+		}
+
+
+		</style>
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+    	<div class="container">
+    		<h2 class='container-heading'><span class="heading_font">Genre classifier and Certificate generator</span></h2>
+
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==0 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Miscellaneous &#129321;</span></h1>
+			    <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/1osU6SjAhsDWZMegZSKWfx/b91f3c5cf5ff4065645362e6f9bb328e/BBFC_U_RGB.png?w=703" alt="U CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==1 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Action &#128074; </span></h1>
+			     <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/33cW1re0pZprTxrKdbc7Nq/850f382a2413955cf4757270f8458a4a/BBFC_PG_RGB.png?w=703" alt="PG CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==2 %}
+
+				<h1>Predicted Genre: <span class='result-prediction'>Adventure &#129312;</span></h1>
+			    <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/1osU6SjAhsDWZMegZSKWfx/b91f3c5cf5ff4065645362e6f9bb328e/BBFC_U_RGB.png?w=703" alt="U CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==3 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Comedy &#128514;</span></h1>
+			    <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/1osU6SjAhsDWZMegZSKWfx/b91f3c5cf5ff4065645362e6f9bb328e/BBFC_U_RGB.png?w=703" alt="U CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==4 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Drama &#129313;</span></h1>
+			    <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/1osU6SjAhsDWZMegZSKWfx/b91f3c5cf5ff4065645362e6f9bb328e/BBFC_U_RGB.png?w=703" alt="U CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==5 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Horror &#128552; </span></h1>
+             <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/33cW1re0pZprTxrKdbc7Nq/850f382a2413955cf4757270f8458a4a/BBFC_PG_RGB.png?w=703" alt="PG CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==6 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Romance ❤️</span></h1>
+				<center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/33cW1re0pZprTxrKdbc7Nq/850f382a2413955cf4757270f8458a4a/BBFC_PG_RGB.png?w=703" alt="PG CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==7 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Sci-Fi &#129302;</span></h1>
+			    <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/1osU6SjAhsDWZMegZSKWfx/b91f3c5cf5ff4065645362e6f9bb328e/BBFC_U_RGB.png?w=703" alt="U CERTIFICATE" ,height="200" , width="300"></center>
+			{% elif prediction==8 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Thriller &#x1F5E1;</span></h1>
+			    <center>	<img src="https://images.ctfassets.net/uu7eig3ts82c/33cW1re0pZprTxrKdbc7Nq/850f382a2413955cf4757270f8458a4a/BBFC_PG_RGB.png?w=703" alt="PG CERTIFICATE" ,height="200" , width="300"></center>
+			{% endif %}
+		</div>
+
+   <div class="w3-center"><a href="{{url_for('page')}}" ><button class="w3-btn w3-teal w3-round-large" style="background-color: black;
+  border: 1px solid green;
+  color: white;
+  text-decoration: none;
+  display:block;
+  font-size: 10px;
+  cursor: pointer;
+  display:block;
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family:courier;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;" type="submit" value="reset">Back to home</button></a></div>
+<!-- Footer -->
+			<div class="footer">
+				<center>
+			 <br><br><br><br><br><br><br>
+			 </div>
+
+        </div>
+
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Movies Reviews Classifier</title>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<style>
+		body {
+			background: linear-gradient(#e66465, #9198e5);
+			background-repeat: repeat;
+			background-attachment:scroll;
+			background-size: 100% 100%;
+
+		  }
+		  .container{
+                color:black;
+                font-color:black;
+                font-size:40px;
+                text-align: center;
+                padding:10px;
+
+            }
+			.results{
+		    color:black;
+                font-size:30px;
+                text-align: center;
+                padding:10px;
+
+			}
+		  .footer {
+                position:relative;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color:black;
+                font-size:30px;
+				font-weight: bold;
+                text-align: center;
+                padding:5px;
+
+}
+.footer {
+
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: linear-gradient(#e66465, #9198e5);
+   color: white;
+   font-size:20px;
+   text-align: center;
+   padding:3S0px;
+border-top: 10px solid #F45140;
+}
+		.contact{
+			background: #40514E;
+			color: white;
+		}
+
+
+		</style>
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+		<div class="container">
+			<h2 class='container-heading'><span>Review Classification</span></h2>
+	        	<div class='description'>
+
+			</div>
+		</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Positive Review</span></h1>
+			<center>	<img src="https://wallpaperaccess.com/full/6297942.jpg" alt="happy Image" ,height="200" , width="300"></center>
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Negative Review</span></h1>
+				<center><img src="https://i.pinimg.com/originals/8d/8e/61/8d8e614b25f6a5e3bbc55c419e7e45c3.jpg" alt="sad image" , height="300" , width="300"></center>
+			{% endif %}
+		</div>
+
+   <div class="w3-center"><a href="{{url_for('page')}}" ><button class="w3-btn w3-teal w3-round-large" style="background-color: black;
+  border: 1px solid green;
+  color: white;
+  text-decoration: none;
+  display:block;
+  font-size: 10px;
+  cursor: pointer;
+  display:block;
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family:courier;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;" type="submit" value="reset">Back to home</button></a></div>
+		<!-- Footer -->
+			<div class="footer">
+				<center>
+			 <br><br> SHEEMA SRUTHI NITHYA<br>
+						  Vellore - 632014<br>
+						  Tamil Nadu, India<br>
+						  Phone - 95665 43440<br><br>
+			  </div>
+
+        </div>
+
+	</body>
+</html>

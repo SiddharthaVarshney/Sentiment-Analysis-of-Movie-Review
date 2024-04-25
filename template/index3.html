@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summaryzer</title>
+
+
+<style>
+  body {
+   background: linear-gradient(#9198e5,#e66465 );
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    background-size:100%100%;
+    
+  }
+  .w3-padding w3-teal w3-center{
+    color: rgb(255, 255, 255);
+    font-size:40px;
+    text-align:center;
+    padding:10px;
+  }
+  .ml-container {
+	            margin: 0;
+	            padding-top:0px;
+	            padding-bottom:0px;
+	            padding-left:0px;
+	            padding-right:0px;
+	            opacity: 1;
+	            filter: alpha(opacity=60); /* For IE8 and earlier */
+	            background-color:inherit;
+                border:none;
+                outline:none;
+
+            }
+            textarea {
+    display: block;
+    background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:larger;
+    font-weight:700;
+    color: white;
+    border-color: black;
+    border-radius: 1ch;
+    border-width: 1ch;
+    padding-left: 1ch;
+
+
+}
+  
+</style>
+</head>
+<body>
+  <div class='w3-padding w3-teal w3-center'><h1 align="center">Review Summarization</h1></div>
+
+
+
+<!-- Start of Main Section -->
+<div align="center" class="ml-container"><h3 align="center"></h3>
+	<form method="POST" action="/process">
+	<textarea name="input_text" cols="5" rows="10"  required="true" placeholder="Enter Text Here" style="width:60%"></textarea>
+                <br>
+                <button class="w3-btn w3-teal" style="   
+                background-color: black;
+                border: 1px solid green;
+                color: white;
+                text-decoration: none;
+                display:block;
+                font-size: 10px;
+                cursor: pointer;
+                display:block;
+                border-radius: 10px;
+                background-color: black;
+                border: none;
+                color: white;
+                font-size: 20px;
+                font-family:courier;
+                padding: 5px;
+                width: 150px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: auto;" type="submit" value="reset" >Summarize</button><br>
+                <button class="w3-btn w3-blue-grey" style="   
+         background-color: black;
+         border: 1px solid green;
+         color: white;
+         text-decoration: none;
+         display:block;
+         font-size: 10px;
+         cursor: pointer;
+         display:block;
+         border-radius: 10px;
+         background-color: black;
+         border: none;
+         color: white;
+         font-size: 20px;
+         font-family:courier;
+         padding: 5px;
+         width: 100px;
+         transition: all 0.5s;
+         cursor: pointer;
+         margin: auto;" type="reset" value="reset" >Clear</button>
+          <div class="input-field">
+        </div>
+</form></div>
+<br><br>
+<div align="center" class="ml-container"><h2 align="center">Give a critic review link</h2>
+<form method="POST" action="/process_url">
+    <textarea input  type="text"name="input_url" placeholder="Enter URL Here" required="true"  style="width:50%"></textarea>
+<br><br>
+<button class="w3-btn w3-teal" style="   
+background-color: black;
+border: 1px solid green;
+color: white;
+text-decoration: none;
+display:block;
+font-size: 10px;
+cursor: pointer;
+display:block;
+border-radius: 10px;
+background-color: black;
+border: none;
+color: white;
+font-size: 20px;
+font-family:courier;
+padding: 5px;
+width: 150px;
+transition: all 0.5s;
+cursor: pointer;
+margin: auto;" type="submit" value="reset">Summarize</button>  <br>        
+<button class="w3-btn w3-blue-grey" style="   
+          background-color: black;
+          border: 1px solid green;
+          color: white;
+          text-decoration: none;
+          display:block;
+          font-size: 10px;
+          cursor: pointer;
+          display:block;
+          border-radius: 10px;
+          background-color: black;
+          border: none;
+          color: white;
+          font-size: 20px;
+          font-family:courier;
+          padding: 5px;
+          width: 100px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: auto;" type="reset" value="reset">Clear</button>
+
+</form>
+
+</div>
+<br><br>
+ 
+     
+
+  
+  </div>
+</div>
+<div class="w3-container w3-teal">
+
+<br>
+    </div>
+<footer>
+    <br><br><br><br><br><br><br>
+</footer>
+</body>
+</html>

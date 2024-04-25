@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>result</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
+ <style type="text/css">
+  body {
+    background: linear-gradient(#9198e5,#e66465 );
+     background-repeat: no-repeat;
+     background-attachment: scroll; 
+     background-size:150%150%;
+     
+     
+   }
+
+  </style>
+</head>
+
+<body>
+  <b><h1 align="center" style="font-family:Times New Roman;font-size:200%;">REVIEW SUMMARIZATION RESULT</h1></b>
+
+
+<div class="w3-container w3-padding-24">
+  
+
+  
+  
+<div class="w3-container w3-card">
+ <div class="w3-row">
+
+  <div class="w3-half w3-container ">
+    <h5>Original Review</h5>
+
+             <p >{{ctext}}</p>
+            
+</div>
+
+  <div class="w3-half w3-container w3-light-grey">
+    <h5>Summarized Review</h5>
+              
+
+        
+            <p>{{ final_summary }}</p>
+            
+          
+  </div>
+</div>
+
+
+ </div>
+
+    </div>
+
+ </div>
+ <div class="w3-center"><a href="{{url_for('index3')}}" ><button class="w3-btn w3-teal w3-round-large" style="background-color: black;
+  border: 1px solid green;
+  color: white;
+  text-decoration: none;
+  display:block;
+  font-size: 10px;
+  cursor: pointer;
+  display:block;
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family:courier;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;" type="submit" value="reset">Back</button></a></div>
+<br>
+   <div class="w3-center"><a href="{{url_for('page')}}" ><button class="w3-btn w3-teal w3-round-large" style="background-color: black;
+  border: 1px solid green;
+  color: white;
+  text-decoration: none;
+  display:block;
+  font-size: 10px;
+  cursor: pointer;
+  display:block;
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family:courier;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;" type="submit" value="reset">Back to home</button></a></div>
+<footer><br>
+<br><br><br><br><br><br></footer>
+</body>
+</html>
