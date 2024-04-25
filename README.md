@@ -10,7 +10,7 @@ Ensure you have Python installed on your system. You can download it from [pytho
 
 ### Clone the repository
 
-git clone https://github.com/yourusername/flask-app.git
+git clone https://github.com/SiddharthaVarshney/Sentiment-Analysis-of-Movie-Review.git
 cd flask-app
 
 ### Install Requirements
